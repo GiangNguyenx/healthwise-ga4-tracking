@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HealthWise - Browse our collection of health articles and wellness guides">
+    <title>Health Articles - HealthWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏥</span>
+                    <span class="logo-text">HealthWise</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="articles.html" class="nav-link active">Articles</a></li>
+                    <li><a href="booking.html" class="nav-link">Book Consultation</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Health Articles & Resources</h1>
+            <p>Evidence-based information to help you make informed health decisions</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid -->
+    <section class="articles-section">
+        <div class="container">
+            <div class="articles-filters">
+                <button class="filter-btn active" data-filter="all">All Articles</button>
+                <button class="filter-btn" data-filter="chronic">Chronic Disease</button>
+                <button class="filter-btn" data-filter="nutrition">Nutrition</button>
+                <button class="filter-btn" data-filter="mental">Mental Health</button>
+                <button class="filter-btn" data-filter="fitness">Fitness</button>
+            </div>
+
+            <div class="articles-grid">
+                <!-- Featured Article -->
+                <article class="article-card featured" data-category="chronic">
+                    <div class="article-image">
+                        <div class="article-category">Chronic Disease</div>
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">February 1, 2026</span>
+                            <span class="article-read-time">10 min read</span>
+                        </div>
+                        <h2>Understanding Diabetes: Prevention and Management</h2>
+                        <p>A comprehensive guide to understanding diabetes, including types, symptoms, risk factors, and evidence-based strategies for prevention and management. Learn how to take control of your health.</p>
+                        <a href="article-diabetes.html" class="btn btn-primary">Read Full Article</a>
+                    </div>
+                </article>
+
+                <!-- Regular Articles -->
+                <article class="article-card" data-category="nutrition">
+                    <div class="article-image">
+                        <div class="article-category">Nutrition</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 28, 2026</span>
+                            <span class="article-read-time">7 min read</span>
+                        </div>
+                        <h3>10 Superfoods for Better Health</h3>
+                        <p>Discover the most nutrient-dense foods that can boost your immune system, improve energy levels, and support overall wellness.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="mental">
+                    <div class="article-image">
+                        <div class="article-category">Mental Health</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 25, 2026</span>
+                            <span class="article-read-time">8 min read</span>
+                        </div>
+                        <h3>Managing Stress in Modern Life</h3>
+                        <p>Evidence-based techniques to reduce stress, improve mental clarity, and enhance emotional well-being in today's fast-paced world.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="fitness">
+                    <div class="article-image">
+                        <div class="article-category">Fitness</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 22, 2026</span>
+                            <span class="article-read-time">6 min read</span>
+                        </div>
+                        <h3>Beginner's Guide to Exercise</h3>
+                        <p>Start your fitness journey with this comprehensive guide designed for beginners, including workout plans and safety tips.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="nutrition">
+                    <div class="article-image">
+                        <div class="article-category">Nutrition</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 20, 2026</span>
+                            <span class="article-read-time">5 min read</span>
+                        </div>
+                        <h3>The Mediterranean Diet: A Complete Guide</h3>
+                        <p>Learn about one of the world's healthiest eating patterns and how to incorporate it into your daily life.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="chronic">
+                    <div class="article-image">
+                        <div class="article-category">Chronic Disease</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 18, 2026</span>
+                            <span class="article-read-time">9 min read</span>
+                        </div>
+                        <h3>Heart Health: Prevention is Key</h3>
+                        <p>Understanding cardiovascular health and the lifestyle changes that can significantly reduce your risk of heart disease.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="mental">
+                    <div class="article-image">
+                        <div class="article-category">Mental Health</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 15, 2026</span>
+                            <span class="article-read-time">7 min read</span>
+                        </div>
+                        <h3>Sleep Hygiene: Better Rest for Better Health</h3>
+                        <p>Practical strategies to improve sleep quality and establish healthy sleep patterns for optimal health.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="fitness">
+                    <div class="article-image">
+                        <div class="article-category">Fitness</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 12, 2026</span>
+                            <span class="article-read-time">6 min read</span>
+                        </div>
+                        <h3>Strength Training for All Ages</h3>
+                        <p>Why strength training is essential at every stage of life and how to get started safely and effectively.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="article-card" data-category="nutrition">
+                    <div class="article-image">
+                        <div class="article-category">Nutrition</div>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-date">January 10, 2026</span>
+                            <span class="article-read-time">8 min read</span>
+                        </div>
+                        <h3>Hydration: More Than Just Water</h3>
+                        <p>Understanding the importance of proper hydration and electrolyte balance for optimal health and performance.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <h2>Stay Informed</h2>
+                <p>Subscribe to our newsletter for the latest health tips and articles delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Personalized Health Advice?</h2>
+                <p>Book a consultation with our healthcare experts today.</p>
+                <a href="booking.html" class="btn btn-primary btn-lg cta-button">Book Your Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HealthWise</h4>
+                    <p>Your trusted partner in health and wellness.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="facebook">Facebook</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="twitter">Twitter</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="instagram">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="booking.html">Book Consultation</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@healthwise.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GA4 Tracking -->
+    <script src="ga4-tracking.js"></script>
+</body>
+</html>

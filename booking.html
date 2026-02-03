@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a health consultation with HealthWise certified healthcare professionals">
+    <title>Book Consultation - HealthWise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🏥</span>
+                    <span class="logo-text">HealthWise</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="articles.html" class="nav-link">Articles</a></li>
+                    <li><a href="booking.html" class="nav-link active">Book Consultation</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Your Consultation</h1>
+            <p>Get personalized health advice from our certified healthcare professionals</p>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <!-- Form -->
+                <div class="booking-form-container">
+                    <h2>Schedule Your Appointment</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you within 24 hours to confirm your appointment.</p>
+
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name <span class="required">*</span></label>
+                            <input 
+                                type="text" 
+                                id="fullName" 
+                                name="fullName" 
+                                required
+                                placeholder="Enter your full name"
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required
+                                placeholder="your.email@example.com"
+                                aria-required="true"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone"
+                                placeholder="(555) 123-4567"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="serviceType">Service Type <span class="required">*</span></label>
+                            <select 
+                                id="serviceType" 
+                                name="serviceType" 
+                                required
+                                aria-required="true"
+                            >
+                                <option value="">-- Select a Service --</option>
+                                <option value="general-consultation">General Health Consultation</option>
+                                <option value="diabetes-management">Diabetes Management</option>
+                                <option value="nutrition-counseling">Nutrition Counseling</option>
+                                <option value="mental-health">Mental Health Support</option>
+                                <option value="weight-management">Weight Management</option>
+                                <option value="preventive-care">Preventive Care</option>
+                                <option value="chronic-disease">Chronic Disease Management</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredDate">Preferred Date</label>
+                            <input 
+                                type="date" 
+                                id="preferredDate" 
+                                name="preferredDate"
+                                min="2026-02-04"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="preferredTime">Preferred Time</label>
+                            <select id="preferredTime" name="preferredTime">
+                                <option value="">-- Select a Time --</option>
+                                <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
+                                <option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Additional Information</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="4"
+                                placeholder="Please provide any additional information about your health concerns or questions..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input 
+                                    type="checkbox" 
+                                    name="terms" 
+                                    required
+                                    aria-required="true"
+                                >
+                                <span>I agree to the <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a> <span class="required">*</span></span>
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input 
+                                    type="checkbox" 
+                                    name="newsletter"
+                                >
+                                <span>Subscribe to our newsletter for health tips and updates</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            Submit Booking Request
+                        </button>
+
+                        <p class="form-note">
+                            <strong>Note:</strong> This is a booking request. We will contact you to confirm your appointment within 24 hours.
+                        </p>
+                    </form>
+
+                    <!-- Success Message (Hidden by default) -->
+                    <div id="successMessage" class="success-message" style="display: none;">
+                        <div class="success-icon">✓</div>
+                        <h3>Booking Request Submitted!</h3>
+                        <p>Thank you for choosing HealthWise. We've received your consultation request and will contact you within 24 hours to confirm your appointment.</p>
+                        <p>A confirmation email has been sent to <strong id="confirmedEmail"></strong></p>
+                        <button class="btn btn-outline" onclick="location.reload()">Submit Another Request</button>
+                    </div>
+                </div>
+
+                <!-- Sidebar Information -->
+                <aside class="booking-sidebar">
+                    <div class="sidebar-card">
+                        <h3>What to Expect</h3>
+                        <ul class="expectation-list">
+                            <li>
+                                <span class="step-number">1</span>
+                                <div>
+                                    <strong>Submit Request</strong>
+                                    <p>Fill out the booking form with your details</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">2</span>
+                                <div>
+                                    <strong>Confirmation</strong>
+                                    <p>Receive confirmation within 24 hours</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">3</span>
+                                <div>
+                                    <strong>Consultation</strong>
+                                    <p>Meet with our healthcare professional</p>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="step-number">4</span>
+                                <div>
+                                    <strong>Follow-up</strong>
+                                    <p>Receive personalized health recommendations</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Consultation Options</h3>
+                        <div class="consultation-options">
+                            <div class="option">
+                                <span class="option-icon">💻</span>
+                                <div>
+                                    <strong>Virtual Consultation</strong>
+                                    <p>Video call from the comfort of your home</p>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <span class="option-icon">🏥</span>
+                                <div>
+                                    <strong>In-Person Visit</strong>
+                                    <p>Face-to-face consultation at our clinic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>Need Help?</h3>
+                        <p>If you have questions or need assistance with booking:</p>
+                        <div class="contact-info">
+                            <p><strong>📞 Phone:</strong> (555) 123-4567</p>
+                            <p><strong>✉️ Email:</strong> booking@healthwise.com</p>
+                            <p><strong>⏰ Hours:</strong> Mon-Fri, 8AM-6PM</p>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card highlight">
+                        <h3>🎁 First-Time Patient?</h3>
+                        <p>Get 20% off your first consultation! Use code <strong>HEALTHWISE20</strong> when confirming your appointment.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How long is a typical consultation?</h4>
+                    <p>Most consultations last between 30-60 minutes, depending on the service type and your specific needs.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What should I prepare for my consultation?</h4>
+                    <p>Please have your medical history, current medications, and any relevant test results ready to share with your healthcare provider.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I cancel or reschedule my appointment?</h4>
+                    <p>Yes, you can cancel or reschedule up to 24 hours before your appointment without any charges.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you accept insurance?</h4>
+                    <p>We accept most major insurance plans. Please contact us to verify your specific coverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>HealthWise</h4>
+                    <p>Your trusted partner in health and wellness.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="facebook">Facebook</a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="twitter">Twitter</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" data-social="instagram">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="articles.html">Articles</a></li>
+                        <li><a href="booking.html">Book Consultation</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@healthwise.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthWise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GA4 Tracking -->
+    <script src="ga4-tracking.js"></script>
+</body>
+</html>
