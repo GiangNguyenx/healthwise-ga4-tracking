@@ -13,7 +13,7 @@
 // ============================================
 // CONFIGURATION
 // ============================================
-const GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with your actual GA4 Measurement ID
+const GA4_MEASUREMENT_ID = 'G-L55F6BLETP'; // Replace with your actual GA4 Measurement ID
 
 // ============================================
 // INITIALIZE GA4
